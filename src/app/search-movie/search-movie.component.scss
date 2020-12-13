@@ -1,0 +1,35 @@
+.search
+{
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__form
+  {
+   button
+   {
+     margin: 0.5vw;
+   }
+  }
+
+  &__cards
+  {
+    max-height: 60vh;
+
+    &--img
+    {
+     padding: 0.5vw;
+      max-width: 10vw;
+      max-height: 10vw;
+    }
+
+    p
+    {
+      max-width: 30vw;
+    }
+
+
+  }
+
+}

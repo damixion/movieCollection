@@ -1,0 +1,48 @@
+.collection
+{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+
+}
+.extPanel
+{
+margin-top: 10px;
+width: 40vw;
+border-radius: 10px;
+}
+.listTtile
+{
+  font-size: 25px;
+  font-style: italic;
+}
+.contextSpecialInfo
+{
+  display: flex;
+  flex-direction: column;
+  div
+  {
+    padding: 5px;
+    width: 85%;
+  }
+
+}
+.contextPlot
+{
+  font-style: italic;
+  font-family: fantasy;
+  font-size: 2ex;
+  padding-bottom: 10px;
+}
+.contextInf
+{
+  display: flex;
+  flex-direction: row;
+  button
+  {
+    justify-self: end;
+    margin-top: 20px;
+  }
+}
+

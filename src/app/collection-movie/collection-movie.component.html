@@ -1,0 +1,28 @@
+<div class="collection">
+<mat-accordion>
+  <mat-expansion-panel  hideToggle *ngFor="let mv of listMv let id = index " class="extPanel">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+     <span class="listTtile">{{id +1 }}. {{mv.Title}}</span>
+      </mat-panel-title>
+      <mat-panel-description>
+        {{mv.Type}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="contextPlot"> {{mv.Plot}}</div>
+<div class="contextInf">
+    <div class="contextSpecialInfo">
+      <div>Runtime: {{mv.Runtime}}</div>
+      <div>Genre: {{mv.Genre}}</div>
+      <div>Rating: {{mv.imdbRating | rateToStar}}   ({{mv.imdbRating}})</div>
+
+    </div>
+    <button mat-fab color="primary" (click)="delMove(id)" >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  </mat-expansion-panel>
+</mat-accordion>
+
+</div>

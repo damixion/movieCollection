@@ -1,0 +1,39 @@
+
+<div class="search">
+  <h1>Wyszukaj film</h1>
+<div class="search__form">
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="Title"  [(ngModel)] = "searchTitle" name="Title">
+  </mat-form-field>
+  <button mat-raised-button color="primary"  (click)="getMovie()" >Wyszukaj</button>
+</form>
+
+</div>
+
+
+
+<mat-card class="search__cards example-card "  *ngIf="newMovie?.Response === 'True' ">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{newMovie.Title}}</mat-card-title>
+    <mat-card-subtitle>{{newMovie?.Genre}}</mat-card-subtitle>
+  </mat-card-header>
+<img mat-card-image  class="search__cards--img" src={{newMovie?.Poster}} alt="No poster">
+  <mat-card-content>
+   <p>Premiera: {{newMovie?.Released}} </p>
+   <p>Język: {{newMovie?.Language}} </p>
+   <p>Country: {{newMovie?.Country}} </p>
+   <p>Runtime: {{newMovie?.Runtime}} </p>
+   <p>Rating: {{newMovie?.imdbRating}} </p>
+   <p> {{newMovie?.Plot}} </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="addToCollection()">Dodaj do planu</button>
+  </mat-card-actions>
+</mat-card>
+
+</div>
+
+
